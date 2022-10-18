@@ -1,8 +1,20 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import "fonts/fonts";
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.mainColor {
+    color: #DC9C9C;
+}
+
+.bg-pink {
+    background-color: #FFF4FE;
+}
+
+.ingredientWidth {
+    width: 350px !important;
+}
