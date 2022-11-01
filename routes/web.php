@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +18,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/products', [ProductController::class, 'index']);
-
-Route::view('/{path?}', 'index');
+Route::view('/{path?}', 'index')->where('path', '^((?!api).)*');
 
 
 Auth::routes();

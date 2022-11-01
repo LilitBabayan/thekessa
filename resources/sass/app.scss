@@ -7,6 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import 'react-notifications/lib/notifications.css';
+
+
 .mainColor {
     color: #DC9C9C;
 }
@@ -15,6 +18,16 @@
     background-color: #FFF4FE;
 }
 
-.ingredientWidth {
-    width: 350px !important;
+.radius-7 {
+    border-radius: 7px;
 }
+
+.border-lightGray {
+    border-top: 0.01em solid darkgray !important;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+

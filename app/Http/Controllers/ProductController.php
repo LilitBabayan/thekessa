@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     /**
-     * @var
+     * @var ProductsInterface
      */
-    protected $productsRepository;
+    protected ProductsInterface $productsRepository;
 
     /**
      * @param ProductsInterface $productsRepository
@@ -24,11 +24,23 @@ class ProductController extends Controller
     /**
      * @return JsonResponse
      */
-    public function index()
+    public function index(): JsonResponse
     {
         $products = $this->productsRepository->getAll();
         return response()->json([
             'products' => $products
+        ]);
+    }
+
+    /**
+     * @param $id
+     * @return JsonResponse
+     */
+    public function getProduct($id): JsonResponse
+    {
+        $product = $this->productsRepository->getById($id);
+        return response()->json([
+            'product' => $product
         ]);
     }
 }

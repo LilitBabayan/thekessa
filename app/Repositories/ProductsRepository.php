@@ -4,6 +4,8 @@ namespace App\Repositories;
 
 use App\Contracts\ProductsInterface;
 use App\Models\Product;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 
 class ProductsRepository implements ProductsInterface
 {
@@ -22,11 +24,20 @@ class ProductsRepository implements ProductsInterface
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|mixed
+     * @return Builder[]|Collection|mixed
      */
     public function getAll()
     {
         return $this->model->with('images')->get();
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getById($id)
+    {
+        return $this->model->where('id', $id)->with('images')->first();
     }
 
 }

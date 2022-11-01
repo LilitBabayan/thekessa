@@ -28,9 +28,9 @@ function Header() {
                             <img src={logo} className={`img-fluid`} alt={logo}/>
                         </Link>
                         <ul className="navbar-nav mb-2 mb-lg-0 flex align-items-center">
-                            <li className="nav-item">
-                                <a className="nav-link text-dark" href="#">My Account</a>
-                            </li>
+                            <Link
+                                className={`nav-link ${splitLocation[1] === "sign_up" ? 'mainColor' : 'text-dark'}`}
+                                to="/sign_up"> My account</Link>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">
                                     <svg width="41" height="38" viewBox="0 0 41 38" fill="none"

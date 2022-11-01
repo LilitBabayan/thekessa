@@ -5,6 +5,7 @@ import Ingredients2 from "../../../../public/images/ingredients_2.png"
 import Ingredients3 from "../../../../public/images/ingredients_3.png"
 import Ingredients4 from "../../../../public/images/ingredients_4.png"
 import Ingredients5 from "../../../../public/images/ingredients_5.png"
+import styles from "./UserSideStyles.module.scss"
 
 function Ingredients() {
     return (
@@ -26,10 +27,12 @@ function Ingredients() {
             </div>
 
             <div className={`container`}>
-                <div className={`row`}>
-                    <div className={`col-6 px-5`}>
-                        <div className={`flex align-items-center justify-content-center px-4`}>
-                            <img src={Ingredients2} className={`img-fluid ingredientWidth`} alt={Ingredients2}/>
+                <div className={`row my-5`}>
+                    <div className={`col-12 col-md-6 px-5`}>
+                        <div className={`d-flex align-items-center px-4 h-100`}>
+                            <div className={styles.ingredientWidth}>
+                                <img src={Ingredients2} className={`img-fluid `} alt={Ingredients2}/>
+                            </div>
                             <div>
                                 <h5 className={`fw-bold`}>The Kessa box</h5>
                                 <p className={`mt-3`}>The word "quartz" is derived from the German word "Quarz".</p>
@@ -37,9 +40,12 @@ function Ingredients() {
                         </div>
                     </div>
 
-                    <div className={`col-6 px-5`}>
-                        <div className={`flex align-items-center justify-content-center px-4`}>
-                            <img src={Ingredients3} className={`img-fluid ingredientWidth`} alt={Ingredients3}/>
+                    <div className={`col-12 col-md-6 px-5`}>
+                        <div className={`d-flex align-items-center px-4 h-100`}>
+                            <div className={`${styles.ingredientWidth} position-relative`}>
+                                <img src={Ingredients3} className={`img-fluid ${styles.scrubBall1}`} alt={Ingredients3 + 1}/>
+                                <img src={Ingredients3} className={`img-fluid ${styles.scrubBall2}`} alt={Ingredients3 + 2}/>
+                            </div>
                             <div>
                                 <h5 className={`fw-bold`}>Scrub balls</h5>
                                 <p className={`mt-3`}>The word "quartz" is derived from the German word "Quarz".</p>
@@ -47,9 +53,11 @@ function Ingredients() {
                         </div>
                     </div>
 
-                    <div className={`col-6 px-5`}>
-                        <div className={`flex align-items-center justify-content-center px-4`}>
-                            <img src={Ingredients4} className={`img-fluid ingredientWidth`} alt={Ingredients4}/>
+                    <div className={`col-12 col-md-6 px-5`}>
+                        <div className={`d-flex align-items-center px-4 h-100`}>
+                            <div className={styles.ingredientWidth}>
+                                <img src={Ingredients4} className={`img-fluid`} alt={Ingredients4}/>
+                            </div>
                             <div>
                                 <h5 className={`fw-bold`}>Roze quarts</h5>
                                 <p className={`mt-3`}>The word "quartz" is derived from the German word "Quarz".</p>
@@ -57,9 +65,11 @@ function Ingredients() {
                         </div>
                     </div>
 
-                    <div className={`col-6 px-5`}>
-                        <div className={`flex align-items-center justify-content-center px-4`}>
-                            <img src={Ingredients5} className={`img-fluid ingredientWidth`} alt={Ingredients5}/>
+                    <div className={`col-12 col-md-6 px-5`}>
+                        <div className={`d-flex align-items-center px-4 h-100`}>
+                            <div className={styles.ingredientWidth}>
+                                <img src={Ingredients5} className={`img-fluid`} alt={Ingredients5}/>
+                            </div>
                             <div>
                                 <h5 className={`fw-bold`}>Body/Face gloves</h5>
                                 <p className={`mt-3`}>Body/Face gloves for exfoliating.</p>

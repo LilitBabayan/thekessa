@@ -16,19 +16,20 @@ class ImagesSeeder extends Seeder
      */
     public function run()
     {
-        $dataForInsert = [];
-
         $products = Product::all();
         foreach ($products as $product) {
-            $data = [
-                'product_id' => $product['id'],
-                'path' => Str::slug($product['name']) . '.png',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ];
-            $dataForInsert[] = $data;
+            for ($a = 1; $a <= 4; $a++) {
+                $data = [
+                    'product_id' => $product['id'],
+                    'url' => '/images/products/' . Str::slug($product['name'] . ' ' . $a) . '.png',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ];
+
+                $product->images()->insert($data);
+            }
+
         }
-        Image::insert($dataForInsert);
     }
 
 }

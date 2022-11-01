@@ -1,16 +1,112 @@
 .homeAbsolute {
     position: absolute;
-    top: 15%;
-    left: 0;
+    top: 17%;
+    left: 10%;
     width: 30%;
 }
 
-.expandedImg {
-    left: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    max-width: 100vw;
-    position: relative;
-    right: 50%;
-    width: 100vw;
+.ingredientWidth {
+    max-width: 200px;
 }
+
+
+.scrubBall1 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.scrubBall2 {
+    position: absolute;
+    top: 10%;
+    left: 10%
+}
+
+.waterText {
+    position: absolute;
+    top: 13%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.water1 {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+}
+
+.water2 {
+    position: absolute;
+    bottom: 20%;
+    right: 25%;
+}
+
+.water3 {
+    position: absolute;
+    top: 10%;
+    right: 35%;
+}
+
+.water4 {
+    position: absolute;
+    bottom: 35%;
+    left: 55%;
+}
+
+
+.water6 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+
+.water5 {
+    position: absolute;
+    bottom: 35%;
+    left: 30%;
+}
+
+.water7 {
+    position: absolute;
+    bottom: 20%;
+    left: -4%;
+    transform: rotate(40deg);
+}
+
+.ingredient1 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    transform: rotate(330deg);
+    max-height: 50%;
+}
+
+.ingredient2 {
+    position: absolute;
+    bottom: -15%;
+    left: 20%;
+    transform: rotate(30deg);
+    max-height: 50%;
+}
+
+.ingredient3 {
+    position: relative;
+    top: 20%;
+    left: -38%
+}
+
+.ingredient4 {
+    position: absolute;
+    top: 20%;
+    left: 0
+}
+
+.about4 {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+}
+

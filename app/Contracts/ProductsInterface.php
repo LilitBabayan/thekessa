@@ -9,4 +9,9 @@ interface ProductsInterface
      */
     public function getAll();
 
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getById($id);
 }
