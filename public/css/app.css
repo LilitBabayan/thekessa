@@ -10964,3 +10964,52 @@ textarea.form-control-lg {
 .w-35 {
   width: 35%;
 }
+
+.w-30 {
+  width: 30%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-17 {
+  width: 17%;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.chevron-down {
+  position: relative;
+  background-color: white !important;
+  border-radius: 8px;
+}
+.chevron-down select {
+  position: relative;
+  z-index: 2;
+  background-color: transparent !important;
+}
+.chevron-down:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f078";
+  position: absolute;
+  right: 13px;
+  z-index: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.largeRadio {
+  zoom: 1.5;
+}
+
+input[type=radio] {
+  accent-color: #DC9C9C;
+}

@@ -1,15 +1,36 @@
 import logo from "../../../../public/images/logo.png"
 import {Link} from "react-router-dom";
+import Emitter from "../../services/emitter";
+import Sidebar from "../Sidebar/Sidebar";
 
 function Header() {
     const splitLocation = location.pathname.split('/')
+    const windowWidth = window.innerWidth >= 992
+
+    function openSidebar() {
+        Emitter.emit('openSidebar')
+    }
+
 
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-white">
             <div className="container">
+                {!windowWidth ? (
+                    <div className={`d-flex w-100 justify-content-between`}>
+                        <Link to="/">
+                            <img src={logo} className={`img-fluid`} alt={logo}/>
+                        </Link>
+                        <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                ) : null}
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <div className={`d-flex justify-content-between align-items-center w-100 montserrat py-3`}>
-                        <ul className="navbar-nav mb-2 mb-lg-0 flex align-items-center">
+                        <ul className="navbar-nav mb-2 mb-lg-0 d-flex align-items-center ">
                             <li className="nav-item">
                                 <Link className={`nav-link ${splitLocation[1] === "shop" ? 'mainColor' : 'text-dark'}`}
                                       to="/shop">Shop</Link>
@@ -24,15 +45,18 @@ function Header() {
                                     to="/ingredients"> Ingredients</Link>
                             </li>
                         </ul>
-                        <Link to="/">
-                            <img src={logo} className={`img-fluid`} alt={logo}/>
-                        </Link>
+                        {windowWidth ? (
+                            <Link to="/">
+                                <img src={logo} className={`img-fluid`} alt={logo}/>
+                            </Link>
+                        ) : null}
+
                         <ul className="navbar-nav mb-2 mb-lg-0 flex align-items-center">
                             <Link
                                 className={`nav-link ${splitLocation[1] === "sign_up" ? 'mainColor' : 'text-dark'}`}
                                 to="/sign_up"> My account</Link>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <button className="nav-link bg-transparent" onClick={() => openSidebar()}>
                                     <svg width="41" height="38" viewBox="0 0 41 38" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -43,14 +67,14 @@ function Header() {
                                             fill="black" fillOpacity="0.85"/>
                                     </svg>
 
-                                </a>
+                                </button>
                             </li>
                         </ul>
 
                     </div>
-
                 </div>
             </div>
+            <Sidebar/>
         </nav>
     )
 }

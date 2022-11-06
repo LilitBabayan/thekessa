@@ -10,6 +10,8 @@ import Footer from "../../components/Footer/Footer";
 import {withRouter} from "react-router-dom";
 
 function Home() {
+    const windowWidth = window.innerWidth >= 992
+
     return (
         <div>
             <Header/>
@@ -18,15 +20,15 @@ function Home() {
                     <img src={Background1} className={`img-fluid w-100 mw-100`} alt={Background1}/>
 
                     <div className={`container`}>
-                        <div className={`${styles.homeAbsolute}`}>
-                            <h1 className={`text-white fw-bolder display-5`}>Meet your routine, reinvented.</h1>
-                            <h5 className={`text-white lh-lg mt-3 fw-light`}>The only plastic-free and clean way to rub
+                        <div className={`${styles.homeAbsolute} ${windowWidth ? 'w-30' : 'w-50'}`}>
+                            <p className={`text-white fw-bolder ${windowWidth ? 'display-4' : 'mb-0'} `}>Meet your routine,
+                                reinvented.</p>
+                            <h5 className={`text-white fw-light ${windowWidth ? 'lh-lg mt-3' : 'font-12 mt-1'}`}>The only plastic-free and clean way to rub
                                 the
                                 scrub on your body
                                 you've used your whole
                                 life.</h5>
-
-                            <button className={`btn bg-white border border-dark px-5 py-3 fw-bold mt-5`}>Shop now
+                            <button className={`btn bg-white border border-dark fw-bold ${windowWidth ? 'px-5 py-3  mt-5' : ''}`}>Shop now
                             </button>
                         </div>
 
@@ -34,8 +36,8 @@ function Home() {
                 </div>
 
                 <div className={`container`}>
-                    <div className={`row py-5 my-5`}>
-                        <div className={`col-5 d-flex flex-column justify-content-center px-4`}>
+                    <div className={`row py-5 my-md-5`}>
+                        <div className={`col-12 col-md-5 d-flex flex-column justify-content-center px-4`}>
                             <h3 className={`fw-bolder`}>How to use</h3>
 
                             <h5 className={`fw-bolder mainColor mt-4`}>Step 1</h5>
@@ -51,25 +53,25 @@ function Home() {
 
                         </div>
 
-                        <div className={`col-7 text-end`}>
+                        <div className={`col-12 col-md-7 text-end`}>
                             <img src={Background2} alt={Background2} className={`img-fluid w-100`}/>
                         </div>
                     </div>
 
-                    <div className={`row flex justify-content-between py-5 my-5`}>
-                        <div className={`col-5`}>
+                    <div className={`row flex justify-content-between py-md-5 my-md-5`}>
+                        <div className={`col-12 col-md-5`}>
                             <img src={Background3} alt={Background2} className={`img-fluid w-100`}/>
                             <div className={`flex justify-content-between mt-3`}>
                                 <h5 className={`fw-bold`}>The Kessa scrub</h5>
-                                <h5 className={`fw-bold`}>10,000 AMD</h5>
+                                <h5 className={`fw-bold text-nowrap`}>10,000 AMD</h5>
                             </div>
                         </div>
 
-                        <div className={`col-5`}>
+                        <div className={`col-12 col-md-5 mt-5 mt-md-0`}>
                             <img src={Background4} alt={Background2} className={`img-fluid w-100`}/>
                             <div className={`flex justify-content-between mt-3`}>
                                 <h5 className={`fw-bold`}>The Kessa scrub combo</h5>
-                                <h5 className={`fw-bold`}>12,000 AMD</h5>
+                                <h5 className={`fw-bold text-nowrap`}>12,000 AMD</h5>
                             </div>
                         </div>
                     </div>

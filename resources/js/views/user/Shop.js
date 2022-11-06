@@ -40,7 +40,7 @@ function Shop() {
                     <div className={`row flex justify-content-between`}>
                         {products.map((product, index) => {
                             return (
-                                <div className={`col-5 my-5`} key={index}>
+                                <div className={`col-12 col-md-5 my-5`} key={index}>
                                     <Link to={`/product/${product.id}`}>
                                         <img src={product.images[0].url}
                                              className={`img-fluid w-100`}

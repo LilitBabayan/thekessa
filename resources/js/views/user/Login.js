@@ -61,10 +61,10 @@ function Login(props) {
     return (
         <div>
             <Header/>
-            <div className={`bg-pink ${styles.asd}`}>
+            <div className={`bg-pink ${styles.fullHeight}`}>
                 <div className={`container text-center`}>
                     <div className={`row flex justify-content-center`}>
-                        <div className={`mt-5 pt-5 col-12 col-md-5`}>
+                        <div className={`mt-5 pt-5 col-12 col-lg-5`}>
                             <h2 className={`fw-bolder`}>Sign in</h2>
 
                             <p className={`my-3`}>Don't have an account?

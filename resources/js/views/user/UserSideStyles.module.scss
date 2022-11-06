@@ -2,7 +2,6 @@
     position: absolute;
     top: 17%;
     left: 10%;
-    width: 30%;
 }
 
 .ingredientWidth {
@@ -109,4 +108,28 @@
     right: 20%;
     bottom: 0;
 }
+
+.sideBar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #FFF4FE;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.fullHeight {
+    height: 100vh;
+}
+
+
+@media(max-width: 992px) {
+    .ingredientWidth {
+        max-width: 100px;
+    }
+}
+
 

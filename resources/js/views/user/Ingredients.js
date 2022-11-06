@@ -8,6 +8,9 @@ import Ingredients5 from "../../../../public/images/ingredients_5.png"
 import styles from "./UserSideStyles.module.scss"
 
 function Ingredients() {
+    const windowWidth = window.innerWidth >= 992
+
+
     return (
         <div>
             <Header/>
@@ -16,7 +19,7 @@ function Ingredients() {
             </div>
 
             <div className={`d-flex justify-content-center my-5 text-center`}>
-                <div className={`w-25`}>
+                <div className={windowWidth ? 'w-25' : 'w-75'}>
                     <h5 className={`mainColor fw-bold`}>Our ingredients</h5>
 
                     <h2 className={`fw-bolder my-3`}>Everything You Need, Nothing You Don't</h2>
@@ -43,8 +46,10 @@ function Ingredients() {
                     <div className={`col-12 col-md-6 px-5`}>
                         <div className={`d-flex align-items-center px-4 h-100`}>
                             <div className={`${styles.ingredientWidth} position-relative`}>
-                                <img src={Ingredients3} className={`img-fluid ${styles.scrubBall1}`} alt={Ingredients3 + 1}/>
-                                <img src={Ingredients3} className={`img-fluid ${styles.scrubBall2}`} alt={Ingredients3 + 2}/>
+                                <img src={Ingredients3} className={`img-fluid ${styles.scrubBall1}`}
+                                     alt={Ingredients3 + 1}/>
+                                <img src={Ingredients3} className={`img-fluid ${styles.scrubBall2}`}
+                                     alt={Ingredients3 + 2}/>
                             </div>
                             <div>
                                 <h5 className={`fw-bold`}>Scrub balls</h5>
