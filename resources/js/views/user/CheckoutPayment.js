@@ -25,7 +25,7 @@ function CheckoutPayment() {
 
     return (
         <div className={`d-lg-flex`}>
-            <div className={`p-5 ${windowWidth ? 'w-50' : 'w-100'}`}>
+            <div className={windowWidth ? 'w-50 p-5' : 'w-100 p-3'}>
                 <div className={`${windowWidth ? 'w-60' : 'w-100'} mx-auto`}>
                     <div className={`d-flex justify-content-center mt-5`}>
                         <img src={logo} alt={logo} className={`img-fluid`}/>

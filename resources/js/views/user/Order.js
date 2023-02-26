@@ -16,7 +16,7 @@ function Order(props) {
 
 
     return (
-        <div className={`p-5 bg-pink ${styles.fullHeight} ${windowWidth ? 'w-50' : 'w-100'} d-flex align-items-center`}>
+        <div className={`bg-pink ${styles.fullHeight} ${windowWidth ? 'w-50 p-5' : 'w-100 p-3 mt-5'} d-flex align-items-center`}>
             <div className={`${windowWidth ? 'w-60' : 'w-100'} mx-auto`}>
                 <div>
                     <div className={`py-4`}>
@@ -31,8 +31,8 @@ function Order(props) {
                                         <div className={`w-100 px-3 flex flex-column justify-content-center`}>
                                             <div className={`d-md-flex justify-content-between align-items-center`}>
                                                 <div>
-                                                    <h5 className={`text-nowrap`}>{elem.product.name}</h5>
-                                                    <p>{elem.quantity} pack</p>
+                                                    <h5 className={`text-nowrap ${!windowWidth ? 'font-14':''}`}>{elem.product.name}</h5>
+                                                    <p className={!windowWidth ? 'font-14':''}>{elem.quantity} pack</p>
                                                 </div>
                                                 <p className={`mb-0 fw-bold text-nowrap`}>{numberWithCommas(elem.quantity * elem.product.price)} AMD</p>
                                             </div>

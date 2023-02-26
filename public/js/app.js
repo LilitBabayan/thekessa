@@ -7773,7 +7773,7 @@ function CheckoutInformation(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     className: "d-lg-flex",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-      className: "p-5 ".concat(windowWidth ? 'w-50' : 'w-100'),
+      className: windowWidth ? 'w-50 p-5' : 'w-100 p-3',
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "".concat(windowWidth ? 'w-60' : 'w-100', " mx-auto"),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
@@ -8048,7 +8048,7 @@ function CheckoutPayment() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     className: "d-lg-flex",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-      className: "p-5 ".concat(windowWidth ? 'w-50' : 'w-100'),
+      className: windowWidth ? 'w-50 p-5' : 'w-100 p-3',
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         className: "".concat(windowWidth ? 'w-60' : 'w-100', " mx-auto"),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
@@ -8209,7 +8209,7 @@ function CheckoutShipping(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "d-lg-flex",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-      className: "p-5 ".concat(windowWidth ? 'w-50' : 'w-100'),
+      className: windowWidth ? 'w-50 p-5' : 'w-100 p-3',
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
         className: "".concat(windowWidth ? 'w-60' : 'w-100', " mx-auto"),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
@@ -8970,7 +8970,7 @@ function Order(props) {
     }
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    className: "p-5 bg-pink ".concat(_UserSideStyles_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].fullHeight, " ").concat(windowWidth ? 'w-50' : 'w-100', " d-flex align-items-center"),
+    className: "bg-pink ".concat(_UserSideStyles_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].fullHeight, " ").concat(windowWidth ? 'w-50 p-5' : 'w-100 p-3 mt-5', " d-flex align-items-center"),
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "".concat(windowWidth ? 'w-60' : 'w-100', " mx-auto"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -8992,9 +8992,10 @@ function Order(props) {
                   className: "d-md-flex justify-content-between align-items-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
-                      className: "text-nowrap",
+                      className: "text-nowrap ".concat(!windowWidth ? 'font-14' : ''),
                       children: elem.product.name
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+                      className: !windowWidth ? 'font-14' : '',
                       children: [elem.quantity, " pack"]
                     })]
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
