@@ -1,8 +1,8 @@
 import logo from "../../../../public/images/logo.png"
 
-function Footer() {
+function Footer(props) {
     return (
-        <div className={`bg-dark text-white`}>
+        <div className={`bg-dark text-white ${props.fixed ? 'fixed-bottom' : ''}`}>
             <div className={`container px-lg-0 py-5`}>
                 <div className={`row`}>
                     <div className={`col-12 col-md-6 col-lg-3`}>
@@ -16,6 +16,7 @@ function Footer() {
                         <p>Who we are</p>
                         <p>Our Mission</p>
                         <p>Ingredients</p>
+
                         <p>FAQ</p>
                     </div>
                     <div className={`col-12 col-md-6 col-lg-3`}>
@@ -25,15 +26,17 @@ function Footer() {
                     </div>
                     <div className={`col-12 col-md-6 col-lg-3`}>
                         <h5 className={`fw-bold mb-4`}>Follow us on</h5>
-                        <span>
-                        <i className="fa-brands fa-facebook-f fa-lg"/>
-                    </span>
+                        <a href={`https://www.facebook.com/thekessa`} className={`text-decoration-none text-white`}>
+                            <i className="fa-brands fa-facebook-f fa-lg"/>
+                        </a>
                         <span className={`ml-2`}>
                         <i className="fa-brands fa-twitter fa-lg"/>
                     </span>
-                        <span className={`ml-2`}>
-                        <i className="fa-brands fa-square-instagram fa-lg"/>
-                    </span>
+                        <a href={`https://www.instagram.com/thekessa`}
+                           className={`text-decoration-none text-white ml-2`}>
+
+                            <i className="fa-brands fa-square-instagram fa-lg"/>
+                        </a>
                         <span className={`ml-2`}>
                         <i className="fa-brands fa-linkedin-in fa-lg"/>
                     </span>
@@ -48,11 +51,11 @@ function Footer() {
                             <img src={logo} alt={logo} className={`img-fluid`}/>
                         </div>
                         <div className={`col-12 col-lg-8 d-lg-flex justify-content-between align-items-center`}>
-                            <p>© 2022, The Kessa. All rights reserved.</p>
+                            <p>© {new Date().getFullYear()} , The Kessa. All rights reserved.</p>
                             <div className={`d-lg-flex`}>
                                 <p>Terms & Conditions</p>
                                 <p className={`mx-lg-5`}>Privacy Policy</p>
-                                <p className>Cookie Statement</p>
+                                <p>Cookie Statement</p>
                             </div>
                         </div>
 

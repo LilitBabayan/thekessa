@@ -1,62 +1,50 @@
 import Header from "../../components/Header/Header";
 import styles from "./UserSideStyles.module.scss";
-import {Link} from "react-router-dom";
-import {useState} from "react";
-import {NotificationContainer, NotificationManager} from "react-notifications";
+import {Link, withRouter} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {NotificationContainer} from "react-notifications";
+import {useDispatch, useSelector} from "react-redux";
+import {createNotification} from "./UserHelpers";
 
 function Login(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const dispatch = useDispatch()
+    const user = useSelector(function (state) {
+        return state.user
+    })
+    useEffect(() => {
+        if (user && Object.keys(user).length) {
+            props.history.push('/')
+        }
+    }, [user])
 
 
     function login(e) {
         e.preventDefault()
-
         let data = {
             email: email,
             password: password,
         }
-        axios.post(api_routes.user.login(), data).then((data) => {
-            console.log(111, data)
-            return props.history.push('/');
-        }).catch((error) => {
-            if (error.response.status === 422) {
-                createNotification('error', error.response.data.message,)
-                return props.history.push('/sign_in');
-            }
+
+        axios.get(api_routes.user.csrf()).then(() => {
+            axios.post(api_routes.user.login(), data).then((response) => {
+                dispatch({type: "GET_USER", payload: response.data.user});
+                return props.history.push('/');
+            }).catch((error) => {
+                console.log('error', error)
+                if (error.response.status === 422) {
+                    if (Object.keys(error.response.data.errors).length) {
+                        for (const [key, value] of Object.entries(error.response.data.errors)) {
+                            createNotification('error', value)
+                        }
+                    }
+                }
+                return props.history.push('/login');
+            })
         })
     }
 
-    function csrf(e) {
-        e.preventDefault()
-
-        axios.get(api_routes.user.csrf()).then((data) => {
-            console.log('csrf-data', data)
-            login()
-        }).catch(error => {
-            console.log('error', error.response)
-        })
-
-
-    }
-
-    function createNotification(type, msg) {
-        switch (type) {
-            case 'info':
-                NotificationManager.info(msg);
-                break;
-            case 'success':
-                NotificationManager.success(msg, 'Title here');
-                break;
-            case 'warning':
-                NotificationManager.warning(msg, 'Close after 3000ms');
-                break;
-            case 'error':
-                NotificationManager.error(msg, 'Something went wrong!');
-                break;
-        }
-
-    };
 
     return (
         <div>
@@ -82,7 +70,7 @@ function Login(props) {
                                     Sign in
                                 </button>
 
-                                <Link className={`text-black`} to={``}>Forgot password?</Link>
+                                <Link className={`text-black`} to={`/forgot_password`}>Forgot password?</Link>
                             </form>
                         </div>
                     </div>
@@ -96,4 +84,4 @@ function Login(props) {
 
 }
 
-export default Login
+export default withRouter(Login)

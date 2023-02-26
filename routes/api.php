@@ -1,11 +1,9 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +16,14 @@ use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 */
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/product/{id}', [ProductController::class, 'getProduct']);
-
-
-Route::post('/auth/register', [\App\Http\Controllers\Api\AuthController::class, 'createUser']);
-Route::post('/auth/login', [\App\Http\Controllers\Api\AuthController::class, 'loginUser']);
+Route::post('/order', [OrderController::class, 'createOrder']);
 
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('/user', function (Request $request) {
+    Route::get('/user', function (Request $request) {
         return $request->user();
     });
+
+    Route::post('/product/{id}/rate', [ProductController::class, 'rateProduct']);
 });
 

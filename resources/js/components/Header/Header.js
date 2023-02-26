@@ -1,16 +1,22 @@
 import logo from "../../../../public/images/logo.png"
-import {Link} from "react-router-dom";
+import {Link,} from "react-router-dom";
 import Emitter from "../../services/emitter";
 import Sidebar from "../Sidebar/Sidebar";
+import {connect, useSelector} from "react-redux";
+import {logout} from "../../redux/store";
 
-function Header() {
+function Header(props) {
     const splitLocation = location.pathname.split('/')
     const windowWidth = window.innerWidth >= 992
+
+    const user = useSelector(function (state) {
+        return state.user
+    })
+
 
     function openSidebar() {
         Emitter.emit('openSidebar')
     }
-
 
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-white">
@@ -52,9 +58,22 @@ function Header() {
                         ) : null}
 
                         <ul className="navbar-nav mb-2 mb-lg-0 flex align-items-center">
-                            <Link
-                                className={`nav-link ${splitLocation[1] === "sign_up" ? 'mainColor' : 'text-dark'}`}
-                                to="/sign_up"> My account</Link>
+
+                            <li className="nav-item">
+                                {user && Object.keys(user)?.length ? (
+                                    <button className={`bg-transparent`}
+                                            onClick={(e) => {
+                                                props.logout()
+                                            }}>Logout
+                                    </button>
+                                ) : (
+                                    <Link
+                                        className={`nav-link ${splitLocation[1] === "sign_up" ? 'mainColor' : 'text-dark'}`}
+                                        to="/sign_up"> My account</Link>
+                                )}
+                            </li>
+
+
                             <li className="nav-item">
                                 <button className="nav-link bg-transparent" onClick={() => openSidebar()}>
                                     <svg width="41" height="38" viewBox="0 0 41 38" fill="none"
@@ -79,4 +98,10 @@ function Header() {
     )
 }
 
-export default Header
+const mapDispatchToProps = dispatch => {
+    return {
+        logout: () => dispatch(logout())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Header)

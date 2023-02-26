@@ -6,6 +6,7 @@ import Ingredients3 from "../../../../public/images/ingredients_3.png"
 import Ingredients4 from "../../../../public/images/ingredients_4.png"
 import Ingredients5 from "../../../../public/images/ingredients_5.png"
 import styles from "./UserSideStyles.module.scss"
+import {withRouter} from "react-router-dom";
 
 function Ingredients() {
     const windowWidth = window.innerWidth >= 992
@@ -31,7 +32,7 @@ function Ingredients() {
 
             <div className={`container`}>
                 <div className={`row my-5`}>
-                    <div className={`col-12 col-md-6 px-5`}>
+                    <div className={`col-12 col-md-6 px-2 px-md-5`}>
                         <div className={`d-flex align-items-center px-4 h-100`}>
                             <div className={styles.ingredientWidth}>
                                 <img src={Ingredients2} className={`img-fluid `} alt={Ingredients2}/>
@@ -43,7 +44,7 @@ function Ingredients() {
                         </div>
                     </div>
 
-                    <div className={`col-12 col-md-6 px-5`}>
+                    <div className={`col-12 col-md-6 px-2 px-md-5 mt-4 mt-md-0`}>
                         <div className={`d-flex align-items-center px-4 h-100`}>
                             <div className={`${styles.ingredientWidth} position-relative`}>
                                 <img src={Ingredients3} className={`img-fluid ${styles.scrubBall1}`}
@@ -58,7 +59,7 @@ function Ingredients() {
                         </div>
                     </div>
 
-                    <div className={`col-12 col-md-6 px-5`}>
+                    <div className={`col-12 col-md-6 px-2 px-md-5 mt-4 mt-md-0`}>
                         <div className={`d-flex align-items-center px-4 h-100`}>
                             <div className={styles.ingredientWidth}>
                                 <img src={Ingredients4} className={`img-fluid`} alt={Ingredients4}/>
@@ -70,7 +71,7 @@ function Ingredients() {
                         </div>
                     </div>
 
-                    <div className={`col-12 col-md-6 px-5`}>
+                    <div className={`col-12 col-md-6 px-2 px-md-5 mt-4 mt-md-0`}>
                         <div className={`d-flex align-items-center px-4 h-100`}>
                             <div className={styles.ingredientWidth}>
                                 <img src={Ingredients5} className={`img-fluid`} alt={Ingredients5}/>
@@ -91,4 +92,4 @@ function Ingredients() {
 
 }
 
-export default Ingredients
+export default withRouter(Ingredients)

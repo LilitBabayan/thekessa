@@ -21,60 +21,6 @@
     left: 10%
 }
 
-.waterText {
-    position: absolute;
-    top: 13%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-}
-
-.water1 {
-    position: absolute;
-    top: 25%;
-    right: 25%;
-}
-
-.water2 {
-    position: absolute;
-    bottom: 20%;
-    right: 25%;
-}
-
-.water3 {
-    position: absolute;
-    top: 10%;
-    right: 35%;
-}
-
-.water4 {
-    position: absolute;
-    bottom: 35%;
-    left: 55%;
-}
-
-
-.water6 {
-    position: absolute;
-    top: 20%;
-    left: 25%;
-}
-
-.water5 {
-    position: absolute;
-    bottom: 35%;
-    left: 30%;
-}
-
-.water7 {
-    position: absolute;
-    bottom: 20%;
-    left: -4%;
-    transform: rotate(40deg);
-}
-
 .ingredient1 {
     position: absolute;
     top: 0;
@@ -85,7 +31,7 @@
 
 .ingredient2 {
     position: absolute;
-    bottom: -15%;
+    bottom: 0;
     left: 20%;
     transform: rotate(30deg);
     max-height: 50%;
@@ -94,7 +40,7 @@
 .ingredient3 {
     position: relative;
     top: 20%;
-    left: -38%
+    left: -32%
 }
 
 .ingredient4 {
@@ -105,8 +51,8 @@
 
 .about4 {
     position: absolute;
-    right: 20%;
-    bottom: 0;
+    right: 15%;
+    bottom: -13%;
 }
 
 .sideBar {
@@ -123,6 +69,11 @@
 
 .fullHeight {
     height: 100vh;
+}
+
+.removeBlueLink:hover {
+    color: #DC9C9C;
+    cursor: pointer;
 }
 
 

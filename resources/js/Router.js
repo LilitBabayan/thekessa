@@ -10,6 +10,9 @@ import ProductPage from "./views/user/ProductPage";
 import CheckoutInformation from "./views/user/CheckoutInformation";
 import CheckoutShipping from "./views/user/CheckoutShipping";
 import CheckoutPayment from "./views/user/CheckoutPayment";
+import NotFound from "./views/NotFound";
+import ForgotPassword from "./views/user/ForgotPassword";
+import ResetPassword from "./views/user/ResetPassword";
 
 
 function Main() {
@@ -20,11 +23,15 @@ function Main() {
             <Route exact path="/ingredients" component={Ingredients}/>
             <Route exact path="/shop" component={Shop}/>
             <Route exact path="/sign_up" component={Register}/>
-            <Route exact path="/sign_in" component={Login}/>
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/forgot_password" component={ForgotPassword}/>
+            <Route exact path="/password/reset/:token" component={ResetPassword}/>
             <Route exact path="/product/:id" component={ProductPage}/>
             <Route exact path="/checkout/information" component={CheckoutInformation}/>
             <Route exact path="/checkout/shipping" component={CheckoutShipping}/>
             <Route exact path="/checkout/payment" component={CheckoutPayment}/>
+            <Route component={NotFound}/>
+
         </Switch>
     );
 }

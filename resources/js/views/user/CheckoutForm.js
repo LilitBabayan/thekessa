@@ -7,7 +7,8 @@ import {
     CardCvcElement
 } from "@stripe/react-stripe-js";
 import {Link} from "react-router-dom";
-
+import styles from "./UserSideStyles.module.scss"
+import {createNotification} from "./UserHelpers";
 
 const CARD_NUMBER_ELEMENT_OPTIONS = {
     placeholder: 'Card number',
@@ -72,13 +73,24 @@ class CheckoutForm extends React.Component {
         if (!stripe || !elements) {
             return;
         }
+        const card = elements.getElement(CardNumberElement);
 
-        const card = elements.getElement(CardElement);
         const result = await stripe.createToken(card);
         if (result.error) {
             console.log(result.error.message);
         } else {
-            console.log(result.token);
+            let data = {
+                stripeToken: result.token.id,
+                totalAmount: localStorage.getItem('order_price')
+            }
+            axios.post(api_routes.user.makePayment(), data).then((data) => {
+                console.log(111, data)
+            }).catch((error) => {
+                if (error.response.status === 422) {
+                    createNotification('error', error.response.data.message,)
+                    return props.history.push('/login');
+                }
+            })
         }
     };
 
@@ -107,7 +119,8 @@ class CheckoutForm extends React.Component {
 
 
                     <div className={`d-flex justify-content-between align-items-center mt-5`}>
-                        <Link className={`text-decoration-none mainColor fw-bold`}>
+                        <Link className={`text-decoration-none mainColor fw-bold ${styles.removeBlueLink}`}
+                              to={'/checkout/shipping'}>
                                 <span className={`mainColor mr-2`}>
                                     <i className="fas fa-chevron-left"></i>
                                 </span>

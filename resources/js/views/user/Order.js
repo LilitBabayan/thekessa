@@ -1,8 +1,19 @@
-import productImg from "../../../../public/images/home_3.png";
 import styles from "./UserSideStyles.module.scss"
+import {numberWithCommas} from "./UserHelpers";
+import {useEffect} from "react";
+import {withRouter} from "react-router-dom";
 
-function Order() {
+function Order(props) {
     const windowWidth = window.innerWidth >= 992
+    let orderPrice = localStorage.getItem('order_price')
+    let shoppingCart = JSON.parse(localStorage.getItem('shopping_cart'));
+
+    useEffect(() => {
+        if (!shoppingCart) {
+            return props.history.push('/');
+        }
+    }, [])
+
 
     return (
         <div className={`p-5 bg-pink ${styles.fullHeight} ${windowWidth ? 'w-50' : 'w-100'} d-flex align-items-center`}>
@@ -10,18 +21,26 @@ function Order() {
                 <div>
                     <div className={`py-4`}>
                         <p className={`fw-bold`}>Order summary</p>
-                        <div className={`bg-white p-3 flex justify-content-between radius-7`}>
-                            <img src={productImg} className={windowWidth ? 'w-17' : 'w-35'} alt={productImg}/>
-                            <div className={`w-100 px-3 flex flex-column justify-content-center`}>
-                                <div className={`d-md-flex justify-content-between align-items-center`}>
-                                    <div>
-                                        <h5 className={`text-nowrap`}>The Kessa scrub</h5>
-                                        <p>2 pack</p>
+                        {shoppingCart ?
+                            shoppingCart.map((elem, index) => {
+                                return (
+                                    <div className={`bg-white p-3 flex justify-content-between radius-7 mt-2`}
+                                         key={index}>
+                                        <img src={elem.product.images[0].url} className={windowWidth ? 'w-17' : 'w-35'}
+                                             alt={elem.product.images[0].url}/>
+                                        <div className={`w-100 px-3 flex flex-column justify-content-center`}>
+                                            <div className={`d-md-flex justify-content-between align-items-center`}>
+                                                <div>
+                                                    <h5 className={`text-nowrap`}>{elem.product.name}</h5>
+                                                    <p>{elem.quantity} pack</p>
+                                                </div>
+                                                <p className={`mb-0 fw-bold text-nowrap`}>{numberWithCommas(elem.quantity * elem.product.price)} AMD</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p className={`mb-0 fw-bold text-nowrap`}>20,000 AMD</p>
-                                </div>
-                            </div>
-                        </div>
+                                )
+                            }) : null}
+
                     </div>
 
                     <div className={`py-4 border-top border-bottom`}>
@@ -37,7 +56,7 @@ function Order() {
                         <div className={`p-3 bg-white radius-7`}>
                             <div className={`d-flex justify-content-between`}>
                                 <p className={`text-secondary`}>Subtotal</p>
-                                <p className={`fw-bold text-nowrap`}>20,000 AMD</p>
+                                <p className={`fw-bold text-nowrap`}>{numberWithCommas(orderPrice)} AMD</p>
                             </div>
                             <div className={`d-flex justify-content-between`}>
                                 <p className={`text-secondary`}>Shipping</p>
@@ -53,7 +72,7 @@ function Order() {
 
                     <div className={`py-4 d-flex justify-content-between`}>
                         <p className={`text-secondary`}>Total</p>
-                        <p className={`fw-bold`}>20,000 AMD</p>
+                        <p className={`fw-bold`}>{numberWithCommas(orderPrice)} AMD</p>
                     </div>
 
                 </div>
@@ -63,4 +82,4 @@ function Order() {
     )
 }
 
-export default Order
+export default withRouter(Order)

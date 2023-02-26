@@ -4,6 +4,10 @@ module.exports = {
     root: root,
 
     user: {
+        user() {
+            return root + '/user';
+        },
+
         products() {
             return root + '/products';
         },
@@ -12,15 +16,35 @@ module.exports = {
             return root + '/product/' + id;
         },
         register() {
-            return root + '/auth/register';
+            return '/register';
         },
 
         login() {
-            return root + '/auth/login';
+            return '/login';
         },
 
         csrf() {
-            return root + '/sanctum/csrf-cookie';
+            return '/sanctum/csrf-cookie';
         },
+
+        logout() {
+            return '/logout';
+        },
+
+        forgotPassword() {
+            return '/password/email';
+        },
+
+        updatePassword() {
+            return '/password/reset';
+        },
+
+        makePayment() {
+            return root + '/order';
+        },
+
+        rateProduct(id) {
+            return root + '/product/' + id + '/rate';
+        }
     }
 }

@@ -3,15 +3,22 @@ import Footer from "../../components/Footer/Footer";
 import React, {useEffect, useState} from 'react';
 import {Load} from "../../components/Loading/Load";
 import StarRatings from "react-star-ratings/build/star-ratings";
-import {numberWithCommas} from "./userHelpers";
-import {Link} from "react-router-dom";
+import {numberWithCommas} from "./UserHelpers";
+import {Link, withRouter} from "react-router-dom";
+import {useSelector} from "react-redux";
+import {getProduct, getProducts, reviewProduct} from "./ProductHelpers";
 
 
 function Shop() {
 
     const [products, setProducts] = useState([]);
     const [showLoading, setShowLoading] = useState(true);
-    const [rating, setRating] = useState(4.3);
+    const [reviewKey, setReviewKey] = useState(Math.random());
+
+    const user = useSelector(function (state) {
+        return state.user
+    })
+
     useEffect(() => {
         getProducts().then((data) => {
             setProducts(data.data.products)
@@ -19,23 +26,30 @@ function Shop() {
         })
     }, [])
 
-
-    function getProducts() {
-        return new Promise((resolve, reject) => {
-            axios.get(api_routes.user.products()).then((response) => {
-                return response;
-            }).then(json => {
-                resolve(json);
-            }).catch(error => {
-                reject(error)
-            });
-        });
+    function setRating(rate, productId) {
+        let data = {
+            rate: rate,
+        }
+        reviewProduct(productId, data).then((response) => {
+            if (response.data.success) {
+                getProduct(productId).then((res) => {
+                    if (res.data.product) {
+                        let found = products.find(elem => elem.id === productId)
+                        if (found) {
+                            found.avgrating = res.data.product.avgrating
+                            found.ratings_count = res.data.product.ratings_count
+                            setReviewKey(Math.random())
+                        }
+                    }
+                })
+            }
+        })
     }
 
     return (
         <div>
             <Header/>
-            <div className={`container`}>
+            <div className={`container mb-5`}>
                 {!showLoading ? (
                     <div className={`row flex justify-content-between`}>
                         {products.map((product, index) => {
@@ -48,18 +62,27 @@ function Shop() {
                                     </Link>
                                     <div className={`flex justify-content-between mt-4`}>
                                         <h4 className={`fw-bold`}>{product.name}</h4>
-                                        <h5 className={`fw-bold`}>{numberWithCommas(product.price)} AMD</h5>
+                                        <h5 className={`fw-bold text-nowrap`}>{numberWithCommas(product.price)} AMD</h5>
                                     </div>
-                                    <StarRatings
-                                        rating={rating}
-                                        starRatedColor="black"
-                                        starEmptyColor="lightGray"
-                                        starHoverColor="black"
-                                        changeRating={setRating}
-                                        numberOfStars={5}
-                                        name='rating'
-                                        starDimension="25px"
-                                    />
+
+                                    {user && Object.keys(user).length ? (
+                                        <div className={`d-flex align-items-end`} key={reviewKey}>
+                                            <StarRatings
+                                                rating={product.avgrating ? product.avgrating : 0}
+                                                starRatedColor="black"
+                                                starEmptyColor="lightGray"
+                                                starHoverColor="black"
+                                                changeRating={(e) => setRating(e, product.id)}
+                                                numberOfStars={5}
+                                                name='rating'
+                                                starDimension="25px"
+                                            />
+
+                                            <u className={`ms-3`}>{product.ratings_count} reviews</u>
+                                        </div>
+
+                                    ) : null}
+
                                 </div>
                             )
                         })
@@ -80,4 +103,4 @@ function Shop() {
     )
 }
 
-export default Shop
+export default withRouter(Shop)

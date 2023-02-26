@@ -6,6 +6,7 @@ use App\Contracts\ProductsInterface;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\DB;
 
 class ProductsRepository implements ProductsInterface
 {
@@ -28,7 +29,12 @@ class ProductsRepository implements ProductsInterface
      */
     public function getAll()
     {
-        return $this->model->with('images')->get();
+        return $this->model->with(['images'])
+            ->withCount(['ratings as avgrating' => function ($query) {
+                $query->select(DB::raw('avg(rate)'));
+            },])
+            ->withCount('ratings')
+            ->get();
     }
 
     /**
@@ -37,7 +43,11 @@ class ProductsRepository implements ProductsInterface
      */
     public function getById($id)
     {
-        return $this->model->where('id', $id)->with('images')->first();
+        return $this->model->where('id', $id)->with(['images'])
+            ->withCount(['ratings as avgrating' => function ($query) {
+                $query->select(DB::raw('avg(rate)'));
+            },])
+            ->withCount('ratings')->first();
     }
 
 }

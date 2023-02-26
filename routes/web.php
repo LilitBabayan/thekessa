@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/email/verify/{id}/{hash}', function (Illuminate\Foundation\Auth\EmailVerificationRequest $request) {
+
+    $request->fulfill();
+    return redirect('/');
+})->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::view('/{path?}', 'index')->where('path', '^((?!api).)*');
 
