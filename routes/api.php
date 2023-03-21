@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
@@ -25,5 +26,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
 
     Route::post('/product/{id}/rate', [ProductController::class, 'rateProduct']);
+
+
+    Route::get('/admin/users', [AdminController::class, 'users']);
 });
 

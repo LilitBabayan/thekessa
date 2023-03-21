@@ -31,6 +31,7 @@
         "react-country-region-selector": "^3.6.1",
         "react-notification-system": "^0.1.17",
         "react-notifications": "^1.7.4",
+        "react-paginate": "^8.1.4",
         "react-redux": "^7.2.5",
         "react-router-dom": "^5.3.4",
         "react-simple-image-slider": "^2.4.1",

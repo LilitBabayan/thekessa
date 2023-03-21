@@ -45,6 +45,11 @@ module.exports = {
 
         rateProduct(id) {
             return root + '/product/' + id + '/rate';
+        },
+
+        users() {
+            return root + '/admin/users';
+
         }
     }
 }

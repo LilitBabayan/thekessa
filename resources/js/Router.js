@@ -13,9 +13,17 @@ import CheckoutPayment from "./views/user/CheckoutPayment";
 import NotFound from "./views/NotFound";
 import ForgotPassword from "./views/user/ForgotPassword";
 import ResetPassword from "./views/user/ResetPassword";
+import AdminRoute from "./AdminRoute";
+import AdminDashboard from "./views/admin/Dashboard";
+import AdminUsers from "./views/admin/Users";
+import {useSelector} from "react-redux";
 
 
 function Main() {
+
+    const user = useSelector((state) => state.user);
+    console.log(555,user)
+
     return (
         <Switch>
             <Route exact path="/" component={Home}/>
@@ -30,6 +38,15 @@ function Main() {
             <Route exact path="/checkout/information" component={CheckoutInformation}/>
             <Route exact path="/checkout/shipping" component={CheckoutShipping}/>
             <Route exact path="/checkout/payment" component={CheckoutPayment}/>
+
+            {user && user.is_admin ? (
+                <AdminRoute exact path="/admin/dashboard" component={AdminDashboard} user={user}/>
+            ) : null}
+
+            {user && user.is_admin ? (
+                <AdminRoute exact path="/admin/users" component={AdminUsers} user={user}/>
+            ) : null}
+
             <Route component={NotFound}/>
 
         </Switch>
