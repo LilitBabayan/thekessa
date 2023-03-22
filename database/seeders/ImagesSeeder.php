@@ -18,7 +18,7 @@ class ImagesSeeder extends Seeder
     {
         $products = Product::all();
         foreach ($products as $product) {
-            for ($a = 1; $a <= 4; $a++) {
+            for ($a = 1; $a <= count($products); $a++) {
                 $data = [
                     'product_id' => $product['id'],
                     'url' => '/images/products/' . Str::slug($product['name'] . ' ' . $a) . '.png',

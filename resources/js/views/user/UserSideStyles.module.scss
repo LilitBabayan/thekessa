@@ -83,4 +83,38 @@
     }
 }
 
+@media(max-width: 768px) {
+    .about4 {
+        position: static;
+        max-width: 90%;
+    }
+
+    .ingredient1 {
+        position: absolute;
+        top: -30%;
+        left: 50%;
+        transform: rotate(330deg);
+    }
+
+    .ingredient2 {
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        transform: rotate(30deg);
+    }
+
+    .ingredient3 {
+        position: relative;
+        top: 10%;
+        left: -32%
+    }
+
+    .ingredient4 {
+        position: absolute;
+        top: -5%;
+        left: -20%
+    }
+
+}
+
 

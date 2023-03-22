@@ -67,7 +67,7 @@ function Home() {
                                 <img src={Background3} alt={Background2} className={`img-fluid w-100`}/>
                                 <div className={`flex justify-content-between mt-3`}>
                                     <h4 className={`fw-bold text-black`}>The Kessa scrub</h4>
-                                    <h5 className={`fw-bold text-nowrap text-dark-gray`}>10,000 AMD</h5>
+                                    <h5 className={`fw-bold text-nowrap text-dark-gray`}>9,990 AMD</h5>
                                 </div>
                             </Link>
                         </div>
@@ -77,7 +77,7 @@ function Home() {
                                 <img src={Background4} alt={Background2} className={`img-fluid w-100`}/>
                                 <div className={`flex justify-content-between mt-3`}>
                                     <h4 className={`fw-bold text-black`}>The Kessa scrub combo</h4>
-                                    <h5 className={`fw-bold text-nowrap text-dark-gray`}>12,000 AMD</h5>
+                                    <h5 className={`fw-bold text-nowrap text-dark-gray`}>12,990 AMD</h5>
                                 </div>
                             </Link>
                         </div>

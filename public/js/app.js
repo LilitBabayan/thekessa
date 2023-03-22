@@ -6530,7 +6530,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _public_images_logo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../public/images/logo.png */ "./public/images/logo.png");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -6542,67 +6544,53 @@ function Footer(props) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "row",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "col-12 col-md-6 col-lg-3",
+          className: "col-12 col-md-6 col-lg-4",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
             className: "fw-bold mb-4",
             children: "Shop"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            to: "/shop",
+            className: "d-block text-decoration-none text-white my-3",
             children: "The Kessa"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "Blog"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            to: "/shop",
+            className: "d-block text-decoration-none text-white my-3",
             children: "Reviews"
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "col-12 col-md-6 col-lg-3",
+          className: "col-12 col-md-6 col-lg-4",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
             className: "fw-bold mb-4",
             children: "About"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            to: "/about",
+            className: "d-block text-decoration-none text-white my-3",
             children: "Who we are"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            to: "/about",
+            className: "d-block text-decoration-none text-white my-3",
             children: "Our Mission"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            to: "/ingredients",
+            className: "d-block text-decoration-none text-white my-3",
             children: "Ingredients"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "FAQ"
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "col-12 col-md-6 col-lg-3",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
-            className: "fw-bold mb-4",
-            children: "Company"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "Contact us"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "Careers"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "col-12 col-md-6 col-lg-3",
+          className: "col-12 col-md-6 col-lg-4",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
             className: "fw-bold mb-4",
             children: "Follow us on"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
             href: "https://www.facebook.com/thekessa",
-            className: "text-decoration-none text-white",
+            className: "text-decoration-none text-white my-3",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
               className: "fa-brands fa-facebook-f fa-lg"
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            className: "ml-2",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-              className: "fa-brands fa-twitter fa-lg"
-            })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
             href: "https://www.instagram.com/thekessa",
-            className: "text-decoration-none text-white ml-2",
+            className: "text-decoration-none text-white ml-4 my-3",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
               className: "fa-brands fa-square-instagram fa-lg"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            className: "ml-2",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-              className: "fa-brands fa-linkedin-in fa-lg"
             })
           })]
         })]
@@ -7355,9 +7343,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_images_ingredients_5_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../public/images/ingredients_5.png */ "./public/images/ingredients_5.png");
 /* harmony import */ var _public_images_ingredients_3_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../public/images/ingredients_3.png */ "./public/images/ingredients_3.png");
 /* harmony import */ var _public_images_about_4_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../public/images/about_4.png */ "./public/images/about_4.png");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -7371,106 +7367,104 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function About() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Header_Header__WEBPACK_IMPORTED_MODULE_0__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(window.innerWidth <= 768),
+    _useState2 = _slicedToArray(_useState, 2),
+    mobileWidth = _useState2[0],
+    setMobileWidth = _useState2[1];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Header_Header__WEBPACK_IMPORTED_MODULE_0__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
       className: "container",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
         className: "row",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-          className: "col-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "col-12 col-md-6",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
             src: _public_images_about_1_png__WEBPACK_IMPORTED_MODULE_2__["default"],
             className: "img-fluid",
             alt: _public_images_about_1_png__WEBPACK_IMPORTED_MODULE_2__["default"]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-          className: "col-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            className: "w-75 pl-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-              children: "My journey to use less single-use plastic began when I became a new mom. I was horrified to learn that all the plastic I was throwing away was contaminating our water supply and generating hundreds of microplastics in the water and food I was feeding my baby. I wanted to do my part to help, but it was impossible to find household products like window cleaner, lotion, and toothpaste that didn\u2019t come packaged in plastic. From there, The Kessa was born."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h5", {
-              className: "mt-3",
-              children: "Our mission is simple: make it easy to be eco with innovative products in reusable packaging that are convenient, effective and affordable."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-              className: "mt-3",
-              children: "I hope you\u2019ll join us as we clean up the planet!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-              className: "mt-3",
-              children: "Elen Mkrtichyan, CEO + Co-Founder"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "col-12 col-md-6 d-flex align-items-center",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+            className: !mobileWidth ? 'w-75 pl-5' : '',
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+              children: "As a beauty enthusiast, I was acutely aware of the challenges that healthcare professionals faced when it came to finding comfortable, high-quality scrubs that were both affordable and sustainable. I saw firsthand how medical scrubs made from synthetic materials could cause skin irritation, and how they contributed to the growing problem of textile waste in the healthcare industry. Determined to make a difference, I set out to create a company that would address these issues head-on. I was inspired by the idea of creating scrubs that were not only comfortable and functional but also environmentally friendly and socially responsible."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+              className: "mt-5",
+              children: "Lidia Mkrtichyan, CEO & Founder"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
           className: "col-12 text-center my-5",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h4", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h4", {
             className: "fw-bolder",
             children: "Our Mission"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-            className: "col-4 mx-auto",
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            className: "col-12 col-md-4 mx-auto",
             children: "Join us and millions of others on our journey to reduce plastic waste. Here\u2019s how and why we do it\u2014every little bit counts."
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
             to: "/shop",
             className: "btn bg-white border-2 radius-12 px-5 py-3 fw-bold mt-5",
             children: "Shop now"
           })]
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-      className: "d-flex align-items-center justify-content-center position-relative my-5",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-        className: "w-35",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      className: "d-md-flex align-items-center justify-content-center ".concat(!mobileWidth ? 'position-relative' : '', "my-5"),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: mobileWidth ? 'w-100 position-relative' : 'w-35',
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
           src: _public_images_ingredients_2_png__WEBPACK_IMPORTED_MODULE_4__["default"],
           className: "img-fluid ".concat(_UserSideStyles_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].ingredient1),
           alt: _public_images_ingredients_2_png__WEBPACK_IMPORTED_MODULE_4__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
           src: _public_images_ingredients_5_png__WEBPACK_IMPORTED_MODULE_5__["default"],
           className: "img-fluid ".concat(_UserSideStyles_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].ingredient2),
           alt: _public_images_ingredients_5_png__WEBPACK_IMPORTED_MODULE_5__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
           src: _public_images_ingredients_3_png__WEBPACK_IMPORTED_MODULE_6__["default"],
           className: "img-fluid ".concat(_UserSideStyles_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].ingredient3),
           alt: _public_images_ingredients_3_png__WEBPACK_IMPORTED_MODULE_6__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
           src: _public_images_ingredients_3_png__WEBPACK_IMPORTED_MODULE_6__["default"],
           className: "img-fluid ".concat(_UserSideStyles_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].ingredient4),
           alt: _public_images_ingredients_3_png__WEBPACK_IMPORTED_MODULE_6__["default"]
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-        className: "w-35 py-5 my-3",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h2", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "".concat(mobileWidth ? 'w-100 px-2' : 'w-35  py-5 my-3'),
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h2", {
           className: "fw-bolder mb-4",
           children: "Our impact"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h5", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
           children: "Our products have helped to eliminate over 1 billion single-use plastic bottles from landfills and oceans since 2022."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h5", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
           className: "my-5",
           children: "Instead of plastic poly-mailers, we ship with kraft envelopes padded with post-consumer recycled newspapers."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h5", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
           children: "Our boxes are made of fully recyclable corrugated cardboard and sealed with a kiss \u2014or as others call it, paper tape."
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-      className: "my-5 py-5 text-center position-relative",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      className: "my-2 my-md-5 py-2 py-md-5 text-center position-relative",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
         className: "fw-bold mt-5",
         children: "We're done with plastic."
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h5", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
         className: "fw-bold my-3",
         children: "Want to support the plastic-free journey?"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
         to: "/shop",
         className: "btn bg-white border-2 radius-12 px-5 py-3 fw-bold mt-5",
         children: "Shop now"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
         src: _public_images_about_4_png__WEBPACK_IMPORTED_MODULE_7__["default"],
         className: _UserSideStyles_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].about4,
         alt: _public_images_about_4_png__WEBPACK_IMPORTED_MODULE_7__["default"]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
   });
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_router_dom__WEBPACK_IMPORTED_MODULE_10__.withRouter)(About));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_router_dom__WEBPACK_IMPORTED_MODULE_11__.withRouter)(About));
 
 /***/ }),
 
@@ -7811,7 +7805,7 @@ function CheckoutInformation(props) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
               className: "mb-2",
               children: "Contact information"
-            }), !user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
+            }), !Object.keys(user).length ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
               className: "text-secondary mb-2",
               children: ["Already have an account?", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
                 to: "/login",
@@ -7824,7 +7818,7 @@ function CheckoutInformation(props) {
             placeholder: "Email",
             className: "p-2 form-control",
             value: email,
-            disabled: user,
+            disabled: !!Object.keys(user).length,
             onChange: function onChange(e) {
               dispatch({
                 type: 'CHANGE_ORDER',
@@ -7833,7 +7827,7 @@ function CheckoutInformation(props) {
                 }
               });
             }
-          }), !user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          }), !Object.keys(user).length ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "d-flex mt-2",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
               type: "checkbox",
@@ -7853,7 +7847,7 @@ function CheckoutInformation(props) {
               placeholder: "First name",
               className: "form-control p-2 mr-2",
               value: first_name,
-              disabled: user,
+              disabled: !!Object.keys(user).length,
               onChange: function onChange(e) {
                 dispatch({
                   type: 'CHANGE_ORDER',
@@ -7867,7 +7861,7 @@ function CheckoutInformation(props) {
               placeholder: "Last name",
               className: "form-control p-2 ml-2",
               value: last_name,
-              disabled: user,
+              disabled: !!Object.keys(user).length,
               onChange: function onChange(e) {
                 dispatch({
                   type: 'CHANGE_ORDER',
@@ -8597,7 +8591,7 @@ function Home() {
                   children: "The Kessa scrub"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h5", {
                   className: "fw-bold text-nowrap text-dark-gray",
-                  children: "10,000 AMD"
+                  children: "9,990 AMD"
                 })]
               })]
             })
@@ -8617,7 +8611,7 @@ function Home() {
                   children: "The Kessa scrub combo"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h5", {
                   className: "fw-bold text-nowrap text-dark-gray",
-                  children: "12,000 AMD"
+                  children: "12,990 AMD"
                 })]
               })]
             })
@@ -9181,36 +9175,41 @@ function ProductPage(props) {
     _useState2 = _slicedToArray(_useState, 2),
     productId = _useState2[0],
     setProductId = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(window.innerWidth <= 768),
     _useState4 = _slicedToArray(_useState3, 2),
-    product = _useState4[0],
-    setProduct = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+    mobileWidth = _useState4[0],
+    setMobileWidth = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
     _useState6 = _slicedToArray(_useState5, 2),
-    consistency = _useState6[0],
-    setConsistency = _useState6[1];
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+    product = _useState6[0],
+    setProduct = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState8 = _slicedToArray(_useState7, 2),
-    showLoading = _useState8[0],
-    setShowLoading = _useState8[1];
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+    consistency = _useState8[0],
+    setConsistency = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
     _useState10 = _slicedToArray(_useState9, 2),
-    quantity = _useState10[0],
-    setQuantity = _useState10[1];
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(Math.random()),
+    showLoading = _useState10[0],
+    setShowLoading = _useState10[1];
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
     _useState12 = _slicedToArray(_useState11, 2),
-    reviewKey = _useState12[0],
-    setReviewKey = _useState12[1];
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(localStorage.getItem('order_price')),
+    quantity = _useState12[0],
+    setQuantity = _useState12[1];
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(Math.random()),
     _useState14 = _slicedToArray(_useState13, 2),
-    orderPrice = _useState14[0],
-    setOrderPrice = _useState14[1];
+    reviewKey = _useState14[0],
+    setReviewKey = _useState14[1];
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(localStorage.getItem('order_price')),
+    _useState16 = _slicedToArray(_useState15, 2),
+    orderPrice = _useState16[0],
+    setOrderPrice = _useState16[1];
   var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_7__.useSelector)(function (state) {
     return state.user;
   });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     (0,_ProductHelpers__WEBPACK_IMPORTED_MODULE_6__.getProduct)(productId).then(function (data) {
       setProduct(data.data.product);
+      setConsistency(data.data.product.consistency.split(','));
       setShowLoading(false);
     })["catch"](function (error) {
       var _error$response;
@@ -9269,16 +9268,17 @@ function ProductPage(props) {
       children: !showLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
         className: "row",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-          className: "col-6 p-0",
+          className: "col-12 col-md-6 p-0 bg-white",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)((react_simple_image_slider__WEBPACK_IMPORTED_MODULE_3___default()), {
-            width: 850,
-            height: 850,
+            width: !mobileWidth ? 850 : '100%',
+            height: !mobileWidth ? 850 : 400,
             images: product.images,
             showBullets: true,
-            showNavs: true
+            showNavs: true,
+            bgColor: "white"
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          className: "col-6 px-5 py-5 d-flex flex-column justify-content-between",
+          className: "col-12 col-md-6 p-3 p-md-5 d-flex flex-column justify-content-between",
           children: [user && Object.keys(user).length ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
             className: "d-flex align-items-end",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_star_ratings_build_star_ratings__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -9296,15 +9296,26 @@ function ProductPage(props) {
               className: "ms-3",
               children: [product.ratings_count, " reviews"]
             })]
-          }, reviewKey) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
-            className: "fw-bold my-4",
-            children: "Overview"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-            className: "w-50",
-            children: product.description
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
-            className: "fw-bold my-4",
-            children: "Includes"
+          }, reviewKey) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
+              className: "fw-bold my-4",
+              children: "Overview"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+              className: !mobileWidth ? 'w-50' : '',
+              children: product.description
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
+              className: "fw-bold my-4",
+              children: "Includes"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("ul", {
+              children: consistency.map(function (elem, index) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("li", {
+                  className: "text-capitalize",
+                  children: elem
+                }, index);
+              })
+            })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
             className: "d-flex align-items-center",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("h5", {
@@ -9335,7 +9346,7 @@ function ProductPage(props) {
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("button", {
-            className: "bg-black p-3 radius-7 w-75 text-white fw-bold mt-5",
+            className: "bg-black p-3 radius-7 text-white fw-bold mt-5\n                            ".concat(mobileWidth ? 'w-100' : 'w-75'),
             onClick: function onClick() {
               addToCart();
             },
@@ -15169,7 +15180,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".yO249nBtfdk3P9lMuepW0A\\=\\= {\n  position: absolute;\n  top: 17%;\n  left: 10%;\n}\n\n.bu8-njd-dXfgvqGmbWSFog\\=\\= {\n  max-width: 200px;\n}\n\n.RVTOe5CWSl4mNBoLl3Xc7A\\=\\= {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.jEuWhkvyUuqNVgd56MzWEw\\=\\= {\n  position: absolute;\n  top: 10%;\n  left: 10%;\n}\n\n.QXDBB1ngo6VMs3Ak6qLsqg\\=\\= {\n  position: absolute;\n  top: 0;\n  left: 20%;\n  transform: rotate(330deg);\n  max-height: 50%;\n}\n\n.K6gR3LOpdtmYldl6wuVyvw\\=\\= {\n  position: absolute;\n  bottom: 0;\n  left: 20%;\n  transform: rotate(30deg);\n  max-height: 50%;\n}\n\n.KK3zZ3tT7KpcpR2fJ-tghQ\\=\\= {\n  position: relative;\n  top: 20%;\n  left: -32%;\n}\n\n.XM4omwcOQ2Q1LxcFyFCwnA\\=\\= {\n  position: absolute;\n  top: 20%;\n  left: 0;\n}\n\n.mkBEZ9t5XTWIA6RutIXLEg\\=\\= {\n  position: absolute;\n  right: 15%;\n  bottom: -13%;\n}\n\n.a1OcaJM2NpaNIPfqu5Xe1Q\\=\\= {\n  height: 100%;\n  width: 0;\n  position: fixed;\n  z-index: 1;\n  top: 0;\n  right: 0;\n  background-color: #FFF4FE;\n  overflow-x: hidden;\n  transition: 0.5s;\n}\n\n.BjbVsCR3fdOR7uYCLnsnug\\=\\= {\n  height: 100vh;\n}\n\n.rcNU\\+tSzR8vKowaeaF1dUA\\=\\=:hover {\n  color: #DC9C9C;\n  cursor: pointer;\n}\n\n@media (max-width: 992px) {\n  .bu8-njd-dXfgvqGmbWSFog\\=\\= {\n    max-width: 100px;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".yO249nBtfdk3P9lMuepW0A\\=\\= {\n  position: absolute;\n  top: 17%;\n  left: 10%;\n}\n\n.bu8-njd-dXfgvqGmbWSFog\\=\\= {\n  max-width: 200px;\n}\n\n.RVTOe5CWSl4mNBoLl3Xc7A\\=\\= {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.jEuWhkvyUuqNVgd56MzWEw\\=\\= {\n  position: absolute;\n  top: 10%;\n  left: 10%;\n}\n\n.QXDBB1ngo6VMs3Ak6qLsqg\\=\\= {\n  position: absolute;\n  top: 0;\n  left: 20%;\n  transform: rotate(330deg);\n  max-height: 50%;\n}\n\n.K6gR3LOpdtmYldl6wuVyvw\\=\\= {\n  position: absolute;\n  bottom: 0;\n  left: 20%;\n  transform: rotate(30deg);\n  max-height: 50%;\n}\n\n.KK3zZ3tT7KpcpR2fJ-tghQ\\=\\= {\n  position: relative;\n  top: 20%;\n  left: -32%;\n}\n\n.XM4omwcOQ2Q1LxcFyFCwnA\\=\\= {\n  position: absolute;\n  top: 20%;\n  left: 0;\n}\n\n.mkBEZ9t5XTWIA6RutIXLEg\\=\\= {\n  position: absolute;\n  right: 15%;\n  bottom: -13%;\n}\n\n.a1OcaJM2NpaNIPfqu5Xe1Q\\=\\= {\n  height: 100%;\n  width: 0;\n  position: fixed;\n  z-index: 1;\n  top: 0;\n  right: 0;\n  background-color: #FFF4FE;\n  overflow-x: hidden;\n  transition: 0.5s;\n}\n\n.BjbVsCR3fdOR7uYCLnsnug\\=\\= {\n  height: 100vh;\n}\n\n.rcNU\\+tSzR8vKowaeaF1dUA\\=\\=:hover {\n  color: #DC9C9C;\n  cursor: pointer;\n}\n\n@media (max-width: 992px) {\n  .bu8-njd-dXfgvqGmbWSFog\\=\\= {\n    max-width: 100px;\n  }\n}\n@media (max-width: 768px) {\n  .mkBEZ9t5XTWIA6RutIXLEg\\=\\= {\n    position: static;\n    max-width: 90%;\n  }\n  .QXDBB1ngo6VMs3Ak6qLsqg\\=\\= {\n    position: absolute;\n    top: -30%;\n    left: 50%;\n    transform: rotate(330deg);\n  }\n  .K6gR3LOpdtmYldl6wuVyvw\\=\\= {\n    position: absolute;\n    bottom: 0;\n    left: 45%;\n    transform: rotate(30deg);\n  }\n  .KK3zZ3tT7KpcpR2fJ-tghQ\\=\\= {\n    position: relative;\n    top: 10%;\n    left: -32%;\n  }\n  .XM4omwcOQ2Q1LxcFyFCwnA\\=\\= {\n    position: absolute;\n    top: -5%;\n    left: -20%;\n  }\n}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"homeAbsolute": "yO249nBtfdk3P9lMuepW0A==",

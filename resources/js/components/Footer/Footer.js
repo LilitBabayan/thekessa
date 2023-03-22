@@ -1,45 +1,34 @@
 import logo from "../../../../public/images/logo.png"
+import {Link} from "react-router-dom";
 
 function Footer(props) {
     return (
         <div className={`bg-dark text-white ${props.fixed ? 'fixed-bottom' : ''}`}>
             <div className={`container px-lg-0 py-5`}>
                 <div className={`row`}>
-                    <div className={`col-12 col-md-6 col-lg-3`}>
+                    <div className={`col-12 col-md-6 col-lg-4`}>
                         <h5 className={`fw-bold mb-4`}>Shop</h5>
-                        <p>The Kessa</p>
-                        <p>Blog</p>
-                        <p>Reviews</p>
+                        <Link to={`/shop`} className={`d-block text-decoration-none text-white my-3`}>The Kessa</Link>
+                        <Link to={`/shop`} className={`d-block text-decoration-none text-white my-3`}>Reviews</Link>
                     </div>
-                    <div className={`col-12 col-md-6 col-lg-3`}>
+                    <div className={`col-12 col-md-6 col-lg-4`}>
                         <h5 className={`fw-bold mb-4`}>About</h5>
-                        <p>Who we are</p>
-                        <p>Our Mission</p>
-                        <p>Ingredients</p>
+                        <Link to={`/about`} className={`d-block text-decoration-none text-white my-3`}>Who we are</Link>
+                        <Link to={`/about`} className={`d-block text-decoration-none text-white my-3`}>Our Mission</Link>
+                        <Link to={`/ingredients`} className={`d-block text-decoration-none text-white my-3`}>Ingredients</Link>
+                    </div>
 
-                        <p>FAQ</p>
-                    </div>
-                    <div className={`col-12 col-md-6 col-lg-3`}>
-                        <h5 className={`fw-bold mb-4`}>Company</h5>
-                        <p>Contact us</p>
-                        <p>Careers</p>
-                    </div>
-                    <div className={`col-12 col-md-6 col-lg-3`}>
+                    <div className={`col-12 col-md-6 col-lg-4`}>
                         <h5 className={`fw-bold mb-4`}>Follow us on</h5>
-                        <a href={`https://www.facebook.com/thekessa`} className={`text-decoration-none text-white`}>
+                        <a href={`https://www.facebook.com/thekessa`} className={`text-decoration-none text-white my-3`}>
                             <i className="fa-brands fa-facebook-f fa-lg"/>
                         </a>
-                        <span className={`ml-2`}>
-                        <i className="fa-brands fa-twitter fa-lg"/>
-                    </span>
-                        <a href={`https://www.instagram.com/thekessa`}
-                           className={`text-decoration-none text-white ml-2`}>
 
+                        <a href={`https://www.instagram.com/thekessa`}
+                           className={`text-decoration-none text-white ml-4 my-3`}>
                             <i className="fa-brands fa-square-instagram fa-lg"/>
                         </a>
-                        <span className={`ml-2`}>
-                        <i className="fa-brands fa-linkedin-in fa-lg"/>
-                    </span>
+
                     </div>
                 </div>
 

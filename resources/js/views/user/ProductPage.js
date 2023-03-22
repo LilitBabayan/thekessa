@@ -12,6 +12,7 @@ import Emitter from "../../services/emitter";
 
 function ProductPage(props) {
     const [productId, setProductId] = useState(props.match.params.id);
+    const [mobileWidth, setMobileWidth] = useState(window.innerWidth <= 768);
     const [product, setProduct] = useState({});
     const [consistency, setConsistency] = useState([]);
     const [showLoading, setShowLoading] = useState(true);
@@ -25,6 +26,7 @@ function ProductPage(props) {
     useEffect(() => {
         getProduct(productId).then((data) => {
             setProduct(data.data.product)
+            setConsistency(data.data.product.consistency.split(','))
             setShowLoading(false)
         }).catch(error => {
             console.log('error', error)
@@ -55,7 +57,7 @@ function ProductPage(props) {
         } else {
             localStorage.setItem('shopping_cart', JSON.stringify([newData]))
             setOrderPrice(quantity * product.price)
-            localStorage.setItem('order_price',quantity * product.price)
+            localStorage.setItem('order_price', quantity * product.price)
 
         }
 
@@ -87,16 +89,17 @@ function ProductPage(props) {
             <div className={`container-fluid`}>
                 {!showLoading ? (
                     <div className={`row`}>
-                        <div className={`col-6 p-0`}>
+                        <div className={`col-12 col-md-6 p-0 bg-white`}>
                             <SimpleImageSlider
-                                width={850}
-                                height={850}
+                                width={!mobileWidth ? 850 : '100%'}
+                                height={!mobileWidth ? 850 : 400}
                                 images={product.images}
                                 showBullets={true}
                                 showNavs={true}
+                                bgColor={`white`}
                             />
                         </div>
-                        <div className={`col-6 px-5 py-5 d-flex flex-column justify-content-between`}>
+                        <div className={`col-12 col-md-6 p-3 p-md-5 d-flex flex-column justify-content-between`}>
                             {user && Object.keys(user).length ? (
                                 <div className={`d-flex align-items-end`} key={reviewKey}>
                                     <StarRatings
@@ -114,11 +117,22 @@ function ProductPage(props) {
 
                                 </div>) : null}
 
+                            <div>
+                                <h5 className={`fw-bold my-4`}>Overview</h5>
+                                <p className={!mobileWidth ? 'w-50' : ''}>{product.description}</p>
+                            </div>
 
-                            <h5 className={`fw-bold my-4`}>Overview</h5>
-                            <p className={`w-50`}>{product.description}</p>
+                            <div>
+                                <h5 className={`fw-bold my-4`}>Includes</h5>
 
-                            <h5 className={`fw-bold my-4`}>Includes</h5>
+                                <ul>
+                                    {consistency.map((elem, index) => {
+                                        return (
+                                            <li key={index} className={`text-capitalize`}>{elem}</li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
 
 
                             <div className={`d-flex align-items-center`}>
@@ -137,7 +151,8 @@ function ProductPage(props) {
                                 </div>
                             </div>
 
-                            <button className={`bg-black p-3 radius-7 w-75 text-white fw-bold mt-5`}
+                            <button className={`bg-black p-3 radius-7 text-white fw-bold mt-5
+                            ${mobileWidth ? 'w-100' : 'w-75'}`}
                                     onClick={() => {
                                         addToCart()
                                     }}

@@ -90,7 +90,7 @@ function CheckoutInformation(props) {
                     <form>
                         <div className={`d-md-flex justify-content-between mt-5`}>
                             <p className={`mb-2`}>Contact information</p>
-                            {!user ?
+                            {!Object.keys(user).length ?
                                 <p className={`text-secondary mb-2`}>Already have an account?
                                     <Link to={`/login`} className={`mainColor ml-2`}>Log in</Link>
                                 </p>
@@ -98,7 +98,7 @@ function CheckoutInformation(props) {
 
                         </div>
                         <input type={`text`} placeholder={`Email`} className={`p-2 form-control`} value={email}
-                               disabled={user}
+                               disabled={!!Object.keys(user).length}
                                onChange={(e) => {
                                    dispatch({
                                        type: 'CHANGE_ORDER',
@@ -107,7 +107,7 @@ function CheckoutInformation(props) {
                                        }
                                    })
                                }}/>
-                        {!user ? (
+                        {!Object.keys(user).length ? (
                             <div className={`d-flex mt-2`}>
                                 <input type={`checkbox`} id={`mailCheckbox`}/>
                                 <label htmlFor={`mailCheckbox`} className={`font-14 ml-2`}>Email me with news and
@@ -118,7 +118,7 @@ function CheckoutInformation(props) {
                         <p className={`mb-2 mt-4`}>Shipping address</p>
                         <div className={`d-flex`}>
                             <input type={`text`} placeholder={`First name`} className={`form-control p-2 mr-2`}
-                                   value={first_name} disabled={user}
+                                   value={first_name} disabled={!!Object.keys(user).length}
                                    onChange={(e) => {
                                        dispatch({
                                            type: 'CHANGE_ORDER',
@@ -128,7 +128,7 @@ function CheckoutInformation(props) {
                                        })
                                    }}/>
                             <input type={`text`} placeholder={`Last name`} className={`form-control p-2 ml-2`}
-                                   value={last_name} disabled={user}
+                                   value={last_name} disabled={!!Object.keys(user).length}
                                    onChange={(e) => {
                                        dispatch({
                                            type: 'CHANGE_ORDER',
