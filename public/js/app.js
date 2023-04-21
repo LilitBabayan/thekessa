@@ -7410,7 +7410,7 @@ function About() {
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-      className: "d-md-flex align-items-center justify-content-center ".concat(!mobileWidth ? 'position-relative' : '', "my-5"),
+      className: "d-md-flex align-items-center justify-content-center ".concat(!mobileWidth ? 'position-relative' : '', " my-5"),
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
         className: mobileWidth ? 'w-100 position-relative' : 'w-35',
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {

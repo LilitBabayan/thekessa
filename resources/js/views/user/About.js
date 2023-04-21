@@ -54,7 +54,7 @@ function About() {
 
             </div>
             <div
-                className={`d-md-flex align-items-center justify-content-center ${!mobileWidth ? 'position-relative' : ''}my-5`}>
+                className={`d-md-flex align-items-center justify-content-center ${!mobileWidth ? 'position-relative' : ''} my-5`}>
                 <div className={mobileWidth ? 'w-100 position-relative' : 'w-35'}>
                     <img src={Ingredient1} className={`img-fluid ${styles.ingredient1}`} alt={Ingredient1}/>
                     <img src={Ingredient2} className={`img-fluid ${styles.ingredient2}`} alt={Ingredient2}/>
