@@ -13,6 +13,8 @@ import CheckoutPayment from "./views/user/CheckoutPayment";
 import NotFound from "./views/NotFound";
 import ForgotPassword from "./views/user/ForgotPassword";
 import ResetPassword from "./views/user/ResetPassword";
+import PrivacyPolicy from "./views/user/PrivacyPolicy";
+import TermsAndConditions from "./views/user/TermsAndConditions";
 
 
 function Main() {
@@ -30,6 +32,8 @@ function Main() {
             <Route exact path="/checkout/information" component={CheckoutInformation}/>
             <Route exact path="/checkout/shipping" component={CheckoutShipping}/>
             <Route exact path="/checkout/payment" component={CheckoutPayment}/>
+            <Route exact path="/privacy-policy" component={PrivacyPolicy}/>
+            <Route exact path="/terms-conditions" component={TermsAndConditions}/>
             <Route component={NotFound}/>
 
         </Switch>

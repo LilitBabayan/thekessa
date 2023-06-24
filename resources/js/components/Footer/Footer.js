@@ -14,13 +14,16 @@ function Footer(props) {
                     <div className={`col-12 col-md-6 col-lg-4`}>
                         <h5 className={`fw-bold mb-4`}>About</h5>
                         <Link to={`/about`} className={`d-block text-decoration-none text-white my-3`}>Who we are</Link>
-                        <Link to={`/about`} className={`d-block text-decoration-none text-white my-3`}>Our Mission</Link>
-                        <Link to={`/ingredients`} className={`d-block text-decoration-none text-white my-3`}>Ingredients</Link>
+                        <Link to={`/about`} className={`d-block text-decoration-none text-white my-3`}>Our
+                            Mission</Link>
+                        <Link to={`/ingredients`}
+                              className={`d-block text-decoration-none text-white my-3`}>Ingredients</Link>
                     </div>
 
                     <div className={`col-12 col-md-6 col-lg-4`}>
                         <h5 className={`fw-bold mb-4`}>Follow us on</h5>
-                        <a href={`https://www.facebook.com/thekessa`} className={`text-decoration-none text-white my-3`}>
+                        <a href={`https://www.facebook.com/thekessa`}
+                           className={`text-decoration-none text-white my-3`}>
                             <i className="fa-brands fa-facebook-f fa-lg"/>
                         </a>
 
@@ -40,11 +43,12 @@ function Footer(props) {
                             <img src={logo} alt={logo} className={`img-fluid`}/>
                         </div>
                         <div className={`col-12 col-lg-8 d-lg-flex justify-content-between align-items-center`}>
-                            <p>© {new Date().getFullYear()} , The Kessa. All rights reserved.</p>
+                            <p className={`mb-0`}>© {new Date().getFullYear()} , The Kessa. All rights reserved.</p>
                             <div className={`d-lg-flex`}>
-                                <p>Terms & Conditions</p>
-                                <p className={`mx-lg-5`}>Privacy Policy</p>
-                                <p>Cookie Statement</p>
+                                <Link to={`/terms-conditions`} className={`mx-3 text-decoration-none text-white`}>Terms
+                                    & Conditions</Link>
+                                <Link to={`/privacy-policy`} className={`mx-3 text-decoration-none text-white`}>Privacy
+                                    Policy</Link>
                             </div>
                         </div>
 
