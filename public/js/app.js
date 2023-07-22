@@ -6362,7 +6362,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _views_user_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/user/Home */ "./resources/js/views/user/Home.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _views_user_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/user/About */ "./resources/js/views/user/About.js");
 /* harmony import */ var _views_user_Ingredients__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/user/Ingredients */ "./resources/js/views/user/Ingredients.js");
 /* harmony import */ var _views_user_Shop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/user/Shop */ "./resources/js/views/user/Shop.js");
@@ -6377,7 +6377,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_user_ResetPassword__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./views/user/ResetPassword */ "./resources/js/views/user/ResetPassword.js");
 /* harmony import */ var _views_user_PrivacyPolicy__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./views/user/PrivacyPolicy */ "./resources/js/views/user/PrivacyPolicy.js");
 /* harmony import */ var _views_user_TermsAndConditions__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/user/TermsAndConditions */ "./resources/js/views/user/TermsAndConditions.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _views_user_Payment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/user/Payment */ "./resources/js/views/user/Payment.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -6398,64 +6400,68 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Main() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Switch, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Switch, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/",
       component: _views_user_Home__WEBPACK_IMPORTED_MODULE_1__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/about",
       component: _views_user_About__WEBPACK_IMPORTED_MODULE_2__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/ingredients",
       component: _views_user_Ingredients__WEBPACK_IMPORTED_MODULE_3__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/shop",
       component: _views_user_Shop__WEBPACK_IMPORTED_MODULE_4__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/sign_up",
       component: _views_user_Register__WEBPACK_IMPORTED_MODULE_5__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/login",
       component: _views_user_Login__WEBPACK_IMPORTED_MODULE_6__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/forgot_password",
       component: _views_user_ForgotPassword__WEBPACK_IMPORTED_MODULE_12__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/password/reset/:token",
       component: _views_user_ResetPassword__WEBPACK_IMPORTED_MODULE_13__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/product/:id",
       component: _views_user_ProductPage__WEBPACK_IMPORTED_MODULE_7__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/checkout/information",
       component: _views_user_CheckoutInformation__WEBPACK_IMPORTED_MODULE_8__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/checkout/shipping",
       component: _views_user_CheckoutShipping__WEBPACK_IMPORTED_MODULE_9__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/checkout/payment",
       component: _views_user_CheckoutPayment__WEBPACK_IMPORTED_MODULE_10__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/privacy-policy",
       component: _views_user_PrivacyPolicy__WEBPACK_IMPORTED_MODULE_14__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       exact: true,
       path: "/terms-conditions",
       component: _views_user_TermsAndConditions__WEBPACK_IMPORTED_MODULE_15__["default"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
+      exact: true,
+      path: "/test_payment",
+      component: _views_user_Payment__WEBPACK_IMPORTED_MODULE_16__["default"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
       component: _views_NotFound__WEBPACK_IMPORTED_MODULE_11__["default"]
     })]
   });
@@ -9075,6 +9081,58 @@ function Order(props) {
   });
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.withRouter)(Order));
+
+/***/ }),
+
+/***/ "./resources/js/views/user/Payment.js":
+/*!********************************************!*\
+  !*** ./resources/js/views/user/Payment.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function Payment() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("form", {
+    action: "https://banking.idram.am/Payment/GetPayment",
+    method: "POST",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+      type: "hidden",
+      name: "EDP_LANGUAGE",
+      value: "EN"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+      type: "hidden",
+      name: "EDP_REC_ACCOUNT",
+      value: "715740107"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+      type: "hidden",
+      name: "EDP_DESCRIPTION",
+      value: "Order description"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+      type: "hidden",
+      name: "EDP_AMOUNT",
+      value: "100"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+      type: "hidden",
+      name: "EDP_BILL_NO",
+      value: "1800"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+      type: "hidden",
+      name: "EDP_EMAIL",
+      value: "lilitbabayan923@gmail.com"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+      type: "submit",
+      value: "submit"
+    })]
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Payment);
 
 /***/ }),
 
