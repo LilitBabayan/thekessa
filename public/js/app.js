@@ -9109,7 +9109,7 @@ function Payment() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
       type: "hidden",
       name: "EDP_REC_ACCOUNT",
-      value: "715740107"
+      value: "110002385"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
       type: "hidden",
       name: "EDP_DESCRIPTION",
