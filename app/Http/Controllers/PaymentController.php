@@ -24,6 +24,6 @@ class PaymentController extends Controller
     public function getResult(Request $request)
     {
         Log::info('result', [$request->all()]);
-        return "OK"
+        return "OK";
     }
 }
