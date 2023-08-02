@@ -10,20 +10,20 @@ class PaymentController extends Controller
     public function success(Request $request)
     {
         Log::info('success', [$request->all()]);
-        echo("OK");
+        return "OK";
 
     }
 
     public function fail(Request $request)
     {
         Log::info('fail', [$request->all()]);
-        echo("OK");
+        return "OK";
 
     }
 
     public function getResult(Request $request)
     {
         Log::info('result', [$request->all()]);
-        echo("OK");
+        return "OK"
     }
 }

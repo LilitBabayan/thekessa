@@ -24,7 +24,7 @@ Route::get('/email/verify/{id}/{hash}', function (Illuminate\Foundation\Auth\Ema
 
 Route::get('/payment/success', [PaymentController::class, 'success']);
 Route::get('/payment/failure', [PaymentController::class, 'fail']);
-Route::get('/payment/result', [PaymentController::class, 'getResult']);
+Route::post('/payment/result', [PaymentController::class, 'getResult']);
 
 Route::view('/{path?}', 'index')->where('path', '^((?!api).)*');
 
